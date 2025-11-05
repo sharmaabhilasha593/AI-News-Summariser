@@ -1,9 +1,8 @@
 import { createContext, useEffect, useState } from "react";
 
 export const StoreContext =createContext(null)
-
 export default function StoreContextProvider(props){
-
+    const [showlogin,setshowlogin]=useState(false)
     const articlesData = {
     tech: [
         {
@@ -159,7 +158,9 @@ export default function StoreContextProvider(props){
     ],
     };
     const contextValue={
-        articlesData
+        articlesData,
+        setshowlogin,
+        showlogin
     }
     return (
         <StoreContext.Provider value={contextValue}>

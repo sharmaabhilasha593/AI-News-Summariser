@@ -1,12 +1,14 @@
 import React, { useState ,useEffect } from 'react'
 import { assets } from '../../assets/assets'
 import {Link} from 'react-router-dom'
+import { StoreContext } from '../../context/Storecontext'
 import './Navbar.css'
+import { useContext } from 'react'
 const Navbar = () => {
     const [menu,setmenu]=useState("home");
     const [navsearch,setnavsearch]=useState(false);  //to display input for search on clicking on icon
     const [sidebarOpen, setSidebarOpen] = useState(false);
-
+  const {carttotal,token,settoken,setshowlogin}=useContext(StoreContext)
      useEffect(() => {
     const path = location.pathname;
     if (path === "/") setmenu("home");
@@ -36,7 +38,7 @@ const Navbar = () => {
             <input type="text" name="search" className={`inputsearch ${navsearch ? 'show' : ''}`} placeholder="Search..." />
             <img onClick={()=>setnavsearch((prev)=>!prev)}  src={assets.search_icon} alt="" className='search_icon' />
         </div>
-        <button className='btn signin'>Sign in</button>
+        <button className='btn signin' onClick={()=>{setshowlogin(true)}} >Sign in</button>
         {/* Hamburger Icon */}
         <img
           src={assets.menu_icon} // add a hamburger icon image in your assets

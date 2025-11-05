@@ -4,6 +4,7 @@ import { StoreContext } from "../../context/Storecontext"
 import ArticleList from '../../components/articleList/ArticleList'
 import Header from "../../components/header/Header"
 import { assets } from "../../assets/assets"
+import Pagecat from "../../components/pagecat/Pagecat"
 const Entertainment = () => {
     const articlesData=useContext(StoreContext)
     
@@ -31,6 +32,13 @@ const Entertainment = () => {
   },
 ];
 
+const entertainmentCategories = [
+  { image: assets.hollywood, title: "Hollywood news", link: "hollywood" },
+  { image: assets.kpop, title: "Kpop updates", link: "kpop" },
+  { image: assets.bollywood, title: "Bollywood updates", link: "bollywood" },
+  { image: assets.tvstories, title: "TV stories", link: "tvstories" },
+];
+
   return (
     <div className='entertainmentpage'>
       <div className="pagecontent">
@@ -40,7 +48,8 @@ const Entertainment = () => {
       <h3 >new releases and music headlines.</h3>
       </div>
       <Header slides={slides}/>
-      <ArticleList category="entertainment"/>
+      <ArticleList category="entertainment" cardtype="Newspreviewcard"/>
+      <Pagecat pageName="entertainment" categories={entertainmentCategories} />;
     </div>
   )
 }

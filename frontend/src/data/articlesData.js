@@ -59,6 +59,35 @@ However, this growth comes with challenges — rising costs, increasing energy c
 Industry experts believe the next big leap will come from quantum and neuromorphic processors that mimic the human brain’s efficiency.`,
       category: "tech",
     },
+    {
+      id: 101,
+      title: "Lights that warn planes of obstacles were exposed to Open Internet",
+      image: "https://www.osce.org/files/imagecache/10_large_gallery/f/images/hires/3/0/509906.jpg?1642091436",
+      content: `Last week, news broke that James Dean will star in a new movie—64 years after his death. 
+A production company called Magic City got the rights to Dean’s image from the late actor’s estate and plans to bring him to the silver screen again thanks to the wonder (or terror) of CGI.
+
+Now, Dean, or the digitally resurrected version of Dean or whatever, will play the second lead in a Vietnam War movie called Finding Jack, with a living actor standing in as his voice.
+
+Unsurprisingly, the announcement inspired a wave of immediate backlash around Hollywood. Chris Evans called it “awful” and “shameful,” and Elijah Wood said, simply, “NOPE.” 
+But it turns out the intense reaction was surprising to at least one person: Magic City’s Anton Ernst, the Finding Jack director.
+
+Ernst told the Hollywood Reporter in a new interview that he’s gotten “positive feedback” about the movie and that the Dean estate has been “supportive,” saying it will inspire “a whole new generation of filmgoers to be aware of James Dean.”`,
+      category: "tech",
+    },
+    {
+      id: 102,
+      title: "AI-powered chips reshaping the semiconductor industry",
+      image: "https://www.computerworld.com/wp-content/uploads/2025/08/3631596-0-02315700-1754826405-shutterstock_2500501661.jpg?quality=50&strip=all",
+      content: `Semiconductor companies are experiencing a renaissance thanks to the exponential demand for AI computing. 
+Leading firms like NVIDIA, AMD, and Intel are racing to produce chips optimized for large language models and machine learning workloads.
+
+In 2025, the global chip market reached a record $700 billion, with AI accelerators contributing nearly 40% of total revenue. 
+Cloud providers such as Google, Amazon, and Microsoft are investing heavily in custom silicon to reduce dependency on traditional GPU suppliers.
+
+However, this growth comes with challenges — rising costs, increasing energy consumption, and a global shortage of raw materials. 
+Industry experts believe the next big leap will come from quantum and neuromorphic processors that mimic the human brain’s efficiency.`,
+      category: "tech",
+    },
   ],
 
   finance: [
@@ -193,31 +222,7 @@ Meanwhile, European countries are experimenting with blockchain-based verificati
 Political analysts see this as a sign of renewed public faith in democratic institutions, though concerns about misinformation and data privacy persist.`,
       category: "politics",
     },
-    {
-      id: 501,
-      title: "Global leaders meet in Geneva to discuss climate and energy policy",
-      image: "https://www.genevaenvironmentnetwork.org/wp-content/uploads/2023/11/2023-11-21-UN-Climate-Change-Conference-_CSJ6596_MC-scaled.jpg",
-      content: `World leaders gathered in Geneva this week for a high-stakes summit addressing climate change, energy security, and sustainable growth. 
-Delegations from over 100 countries attended the three-day event, with discussions focusing on renewable investment and carbon neutrality targets.
-
-The United States and the European Union pledged to reduce carbon emissions by 60% by 2035, while developing nations requested more financial aid for green transitions. 
-The conference also saw commitments for global partnerships in hydrogen energy and carbon capture technologies.
-
-Critics argue that while the promises are ambitious, the implementation remains uncertain without concrete accountability frameworks.`,
-      category: "politics",
-    },
-    {
-      id: 502,
-      title: "Election reforms gain momentum as voter turnout hits new highs",
-      image: "https://www.lowyinstitute.org/sites/default/files/styles/interpreter_article_image/public/2024-05/GettyImages-2147914046.jpg?itok=wS9QID7s",
-      content: `Several democracies reported record-breaking voter turnouts in recent elections, prompting renewed debates over election laws and digital voting systems.
-
-In India, voter participation crossed 72%, driven by youth engagement and social media campaigns. 
-Meanwhile, European countries are experimenting with blockchain-based verification systems to enhance transparency.
-
-Political analysts see this as a sign of renewed public faith in democratic institutions, though concerns about misinformation and data privacy persist.`,
-      category: "politics",
-    },
+   
     {
       id: 501,
       title: "Global leaders meet in Geneva to discuss climate and energy policy",

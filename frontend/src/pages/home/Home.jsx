@@ -4,6 +4,7 @@ import { assets } from '../../assets/assets';
 import "./Home.css"
 import Explore from '../../components/explore/Explore';
 import Personalisation from '../../components/personalisation/Personalisation';
+import Footer from '../../components/footer/Footer';
 const Home = () => {
 
     const slides = [
@@ -43,6 +44,7 @@ const Home = () => {
       <Header slides={slides} />
       <Explore/>
       <Personalisation/>
+      <Footer/>
     </div>
   )
 }

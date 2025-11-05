@@ -6,7 +6,7 @@
     grid-template-columns: repeat(auto-fill,minmax(280px,1fr));
     margin-top: 30px;
     /* gap: 30px; */
-    gap: 2rem;
+    gap: 2.1rem;
     padding: 2rem;
     row-gap: 50px;
     width: 90%;

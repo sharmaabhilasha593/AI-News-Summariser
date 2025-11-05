@@ -9,9 +9,14 @@ import Tech from './pages/tech/Tech';
 import Sports from './pages/sports/Sports';
 import Politics from './pages/politics/Politics';
 import Entertainment from './pages/entertainment/Entertainment';
+import Loginpopup from './loginpopup/Loginpopup';
+import { useContext } from 'react';
+import { StoreContext } from './context/Storecontext';
 const App = () => {
+  const {showlogin}=useContext(StoreContext)
   return (
     <div className='app'>
+      {showlogin?<Loginpopup/>:<></>}
       <Navbar></Navbar>
       <Routes>
         <Route path='/' element={<Home/>}></Route>
