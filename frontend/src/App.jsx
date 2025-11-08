@@ -3,6 +3,7 @@ import Navbar from './components/navbar/Navbar'
 import { Route, Routes } from 'react-router-dom'
 import Home from './pages/home/Home'
 import ArticleList from "./components/articleList/ArticleList";
+
 import ArticleDetail from "./components/articledetail/ArticleDetail";
 
 import Tech from './pages/tech/Tech';
@@ -33,7 +34,7 @@ const App = () => {
         <Route path="/article/:id" element={<ArticleDetail />} />
         <Route path="/article/summary/:id" element={<Articlesummary />} />
 
-        {/* <Route path='/profile' element={<Profilepage/>}></Route> */}
+        <Route path='/profile' element={<Profilepage/>}></Route>
       </Routes>
     
     </div>

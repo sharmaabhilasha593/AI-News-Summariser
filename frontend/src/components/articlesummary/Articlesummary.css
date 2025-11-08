@@ -1,6 +1,4 @@
-/* --- Global Readability and Layout --- */
 .summary-detail-container {
-    /* Center the content and constrain the reading line length for better readability */
     max-width: 80%;
     margin: 0 auto;
     padding: 32px 16px;
@@ -10,42 +8,36 @@
     position: relative;
 }
 
-/* --- Responsive Adjustments for larger screens --- */
 @media (min-width: 768px) {
     .summary-detail-container {
-        padding: 40px 0; /* Less horizontal padding when max-width is hit */
+        padding: 40px 0; 
     }
 }
 
-/* --- Category/Tag Styling (Small Accent) --- */
 .summary-category {
     font-size: 0.9rem;
     font-weight: 600;
     text-transform: uppercase;
-    color: #007bff; /* A nice blue accent color for news tags */
+    color: #007bff; 
     margin-bottom: 8px;
     letter-spacing: 1px;
 }
-
-/* --- Main Title/Headline Styling --- */
 .summary-title {
     font-size: 2.5rem;
     font-weight: 800;
     line-height: 1.2;
     margin-bottom: 24px;
-    border-bottom: 2px solid #eeeeee; /* Subtle separator */
+    border-bottom: 2px solid #eeeeee; 
     padding-bottom: 16px;
     color: #0d0d0d;
 }
 
-/* Adjust title size for small screens */
 @media (max-width: 600px) {
     .summary-title {
         font-size: 1.8rem;
     }
 }
 
-/* --- Section Heading (e.g., "Summary") --- */
 .summary-detail-container h1:not(.summary-title) {
     font-size: 1.5rem;
     font-weight: 700;
@@ -54,17 +46,16 @@
     color: #333333;
 }
 
-/* --- Article Content/Summary Text Styling (The main readable body) --- */
 .summary-content {
     font-size: 1.1rem;
     color: #444444;
-    line-height: 1.8; /* Increased line height for easy reading */
+    line-height: 1.8; 
     margin-bottom: 24px;
     text-align: justify;
 }
 
 .summary-content p {
-    margin-bottom: 1.5rem; /* Space between paragraphs */
+    margin-bottom: 1.5rem;
 }
 
 
@@ -81,27 +72,6 @@
 }
 */
 
-/* --- Download Button Styling (Assuming this is rendered by DownloadArticlePDF) --- */
-.download-pdf-button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px 20px;
-    font-size: 1rem;
-    font-weight: 600;
-    color: #ffffff;
-    background-color: #dc3545; /* A strong color for action (e.g., red for download) */
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    text-decoration: none;
-    margin-top: 20px;
-}
-
-.download-pdf-button:hover {
-    background-color: #c82333;
-}
 
 .backicon{
     position: absolute;
