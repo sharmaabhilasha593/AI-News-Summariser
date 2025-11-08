@@ -9,22 +9,28 @@ import Tech from './pages/tech/Tech';
 import Sports from './pages/sports/Sports';
 import Politics from './pages/politics/Politics';
 import Entertainment from './pages/entertainment/Entertainment';
-import Loginpopup from './loginpopup/Loginpopup';
+import Loginpopup from './components/loginpopup/Loginpopup';
 import { useContext } from 'react';
 import { StoreContext } from './context/Storecontext';
+import { ToastContainer } from 'react-toastify';
+import Profilepage from './components/profilepage/Profilepage';
+import Finance from './pages/finance/Finance';
 const App = () => {
   const {showlogin}=useContext(StoreContext)
   return (
     <div className='app'>
+      <ToastContainer/>
       {showlogin?<Loginpopup/>:<></>}
       <Navbar></Navbar>
       <Routes>
         <Route path='/' element={<Home/>}></Route>
         <Route path="/tech" element={<Tech/>} />
+        <Route path="/finance" element={<Finance/>} />
         <Route path="/sports" element={<Sports/>} />
         <Route path="/politics" element={<Politics />} />
         <Route path="/entertainment" element={<Entertainment />} />
         <Route path="/article/:id" element={<ArticleDetail />} />
+        {/* <Route path='/profile' element={<Profilepage/>}></Route> */}
       </Routes>
     
     </div>

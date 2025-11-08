@@ -1,0 +1,90 @@
+.profile-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+  background-color: #f5f7fa;
+  font-family: "Poppins", sans-serif;
+}
+
+.profile-card {
+  background: white;
+  border-radius: 16px;
+  padding: 30px 40px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  width: 350px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.profile-card:hover {
+  transform: translateY(-3px);
+}
+
+.profile-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #4a90e2;
+  margin-bottom: 15px;
+}
+
+.profile-info h2 {
+  font-size: 1.4rem;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.profile-info p {
+  color: #777;
+  margin: 5px 0;
+  font-size: 0.95rem;
+}
+
+.profile-input {
+  display: block;
+  width: 90%;
+  margin: 8px auto;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 0.95rem;
+  outline: none;
+}
+
+.profile-input:focus {
+  border-color: #4a90e2;
+}
+
+.profile-actions {
+  margin-top: 20px;
+}
+
+.edit-btn,
+.save-btn {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.edit-btn {
+  background-color: #4a90e2;
+  color: white;
+}
+
+.edit-btn:hover {
+  background-color: #3b7bc6;
+}
+
+.save-btn {
+  background-color: #34c759;
+  color: white;
+}
+
+.save-btn:hover {
+  background-color: #2da94b;
+}

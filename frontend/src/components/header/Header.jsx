@@ -3,20 +3,7 @@ import "./Header.css";
 import { assets } from "../../assets/assets";
 
 const Header = ({slides}) => {
-//When you start fetching images from a database later, you can replace:
-// const images = [assets.shops, assets.labs, ...];
-// with
-// const [images, setImages] = useState([]);
-// useEffect(() => {
-//   fetch("/api/images").then(res => res.json()).then(data => setImages(data));
-// }, []);
-// and everything else stays the same ✅
 
-
-
-  // Step 1: Put your image sources in an array
-  
-  // Step 2: Track which image is currently shown
   const [currentIndex, setCurrentIndex] = useState(0);
 
   // Step 3: Handlers for next and previous buttons

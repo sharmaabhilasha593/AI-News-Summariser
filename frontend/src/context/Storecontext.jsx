@@ -3,6 +3,9 @@ import { createContext, useEffect, useState } from "react";
 export const StoreContext =createContext(null)
 export default function StoreContextProvider(props){
     const [showlogin,setshowlogin]=useState(false)
+    const url="http://localhost:3000"
+    const [token,settoken]=useState(localStorage.getItem("token") || "")
+   
     const articlesData = {
     tech: [
         {
@@ -160,7 +163,10 @@ export default function StoreContextProvider(props){
     const contextValue={
         articlesData,
         setshowlogin,
-        showlogin
+        showlogin,
+        token,
+        settoken,
+        url
     }
     return (
         <StoreContext.Provider value={contextValue}>

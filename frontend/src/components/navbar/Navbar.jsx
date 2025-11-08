@@ -1,6 +1,7 @@
 import React, { useState ,useEffect } from 'react'
 import { assets } from '../../assets/assets'
 import {Link} from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { StoreContext } from '../../context/Storecontext'
 import './Navbar.css'
 import { useContext } from 'react'
@@ -8,7 +9,18 @@ const Navbar = () => {
     const [menu,setmenu]=useState("home");
     const [navsearch,setnavsearch]=useState(false);  //to display input for search on clicking on icon
     const [sidebarOpen, setSidebarOpen] = useState(false);
+   
   const {carttotal,token,settoken,setshowlogin}=useContext(StoreContext)
+   useEffect(()=>{
+      setmenu("home");
+    },[token])
+    const navigate=useNavigate();
+    const logout=()=>{
+      localStorage.removeItem("token");
+      settoken("");
+      navigate("/")
+    }
+
      useEffect(() => {
     const path = location.pathname;
     if (path === "/") setmenu("home");
@@ -22,7 +34,7 @@ const Navbar = () => {
 
     <div className='navbar'>
         {/* <img src={assets.logo} className='logo' alt="" /> */}
-        <h1>NewsDesk</h1>
+        <Link to="/"><h1>NewsDesk</h1></Link>
       <div className={`navmenu ${navsearch ?'hide' :''} `}>
         <ul>
             <Link to="/" onClick={()=>{setmenu("home")}} className={menu==="home"?"active":""}>Home</Link>
@@ -38,7 +50,19 @@ const Navbar = () => {
             <input type="text" name="search" className={`inputsearch ${navsearch ? 'show' : ''}`} placeholder="Search..." />
             <img onClick={()=>setnavsearch((prev)=>!prev)}  src={assets.search_icon} alt="" className='search_icon' />
         </div>
-        <button className='btn signin' onClick={()=>{setshowlogin(true)}} >Sign in</button>
+
+        {/* profile dropdown */}
+        {
+          !token?<button className='btn signin' onClick={()=>{setshowlogin(true)}} >Sign in</button>
+          :  <div className="navprofile">
+                <img src={assets.profile_icon} alt="" />
+                <ul className='navprofiledropdown'>
+                    <li onClick={()=>navigate('/profile')}> <img src={assets.user} alt="" /><p >Profile</p></li>
+                    <hr />
+                    <li onClick={logout}> <img src={assets.logout} alt="" /><p>Logout</p></li>
+                </ul>
+            </div>
+        }
         {/* Hamburger Icon */}
         <img
           src={assets.menu_icon} // add a hamburger icon image in your assets

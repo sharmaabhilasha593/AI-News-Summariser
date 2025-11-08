@@ -5,6 +5,7 @@ import "./Home.css"
 import Explore from '../../components/explore/Explore';
 import Personalisation from '../../components/personalisation/Personalisation';
 import Footer from '../../components/footer/Footer';
+import ArticleList from '../../components/articleList/ArticleList';
 const Home = () => {
 
     const slides = [
@@ -43,6 +44,10 @@ const Home = () => {
     <div className='home'>
       <Header slides={slides} />
       <Explore/>
+      <div className="homelist">
+
+        <ArticleList category="politics" cardtype="Newscard"/>
+      </div>
       <Personalisation/>
       <Footer/>
     </div>
