@@ -1,10 +1,11 @@
-import './ArticleDetail.css'
+import './Articlesummary.css'
 import React, { useEffect, useState, useRef } from "react";
 import { useParams, useNavigate, useLocation } from "react-router-dom";
 import { articlesData } from "../../data/articlesData";
 import DownloadArticlePDF from "../downloadarticle/DownloadArticlePDF";
+import { assets } from '../../assets/assets';
 
-const ArticleDetail = () => {
+const Articlesummary = () => {
   const { id } = useParams();
   const location = useLocation();
   const navigate = useNavigate();
@@ -26,23 +27,21 @@ const ArticleDetail = () => {
     </div>
   );
 
-  // provide summary here instead of article
-  const handleClick = () => {
-    navigate(`/article/summary/${article.id}`, { state: article });
-  };
-
   return (
-    <div ref={articleRef} id={`article-${article.id}`} className="article-detail-container">
-      <h3 className="article-category">{article.category}</h3>
-      <h1 className="article-title">{article.title}</h1>
-      <img src={article.image} alt={article.title} className="article-image" />
-      <p className="article-content">{article.content}</p>
+    <div ref={articleRef} id={`article-${article.id}`} className="summary-detail-container">
+        <img src={assets.backicon} className='backicon' alt="" onClick={() => navigate(-1)}/>
+
+        
+      <h3 className="summary-category">{article.category}</h3>
+      <h1 className="summary-title">{article.title}</h1>
+      {/* <img src={article.image} alt={article.title} className="summary-image" /> */}
+      <h1>Summary</h1>
+      <p className="summary-content">{article.summary}</p>
 
       <DownloadArticlePDF articleRef={articleRef} title={article.title} />
-      <button className='summary-btn' onClick={handleClick}>Summary</button>
     </div>
     
   );
 };
 
-export default ArticleDetail;
+export default Articlesummary;

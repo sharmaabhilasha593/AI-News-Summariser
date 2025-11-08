@@ -15,6 +15,7 @@ import { StoreContext } from './context/Storecontext';
 import { ToastContainer } from 'react-toastify';
 import Profilepage from './components/profilepage/Profilepage';
 import Finance from './pages/finance/Finance';
+import Articlesummary from './components/articlesummary/Articlesummary';
 const App = () => {
   const {showlogin}=useContext(StoreContext)
   return (
@@ -30,6 +31,8 @@ const App = () => {
         <Route path="/politics" element={<Politics />} />
         <Route path="/entertainment" element={<Entertainment />} />
         <Route path="/article/:id" element={<ArticleDetail />} />
+        <Route path="/article/summary/:id" element={<Articlesummary />} />
+
         {/* <Route path='/profile' element={<Profilepage/>}></Route> */}
       </Routes>
     

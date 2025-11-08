@@ -24,7 +24,9 @@ import bydate from "./bydate.png";
 import byregion from "./byregion.png";
 import cross_icon from "./cross_icon.png"
 import profile_icon from "./profile_icon.png"
+import backicon from "./backicon.png"
 export const assets={
+    backicon,
     search_icon,
     logo,
     shops,

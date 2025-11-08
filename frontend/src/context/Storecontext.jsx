@@ -5,7 +5,7 @@ export default function StoreContextProvider(props){
     const [showlogin,setshowlogin]=useState(false)
     const url="http://localhost:3000"
     const [token,settoken]=useState(localStorage.getItem("token") || "")
-   
+    const [showsummary,setshowsummary]=useState("false");
     const articlesData = {
     tech: [
         {
@@ -166,7 +166,9 @@ export default function StoreContextProvider(props){
         showlogin,
         token,
         settoken,
-        url
+        url,
+        showsummary,
+        setshowsummary
     }
     return (
         <StoreContext.Provider value={contextValue}>
